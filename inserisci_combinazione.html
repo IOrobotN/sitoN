@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inserisci Combinazione</title>
+    <style>
+      body {
+        background: linear-gradient(180deg, #ffffff 50%, #f0f0f0 50%);
+      }
+
+      h1 {
+        color: #8bc34a;
+        font-family: Arial, sans-serif;
+      }
+
+      input[type="text"] {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+      }
+
+      button {
+        background-color: #8bc34a;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #7cb342;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Inserisci la combinazione</h1>
+    <input type="text" id="codice1" placeholder="Inserisci la combinazione" />
+    <div class="button-container">
+      <button id="invio" onclick="controllaCodice()">Invio</button>
+    </div>
+
+    <script>
+      function controllaCodice() {
+        var codice1 = document.getElementById("codice1").value;
+        document.getElementById("codice1").value = "";
+
+        var input2 = document.createElement("input");
+        input2.type = "text";
+        input2.id = "codice2";
+        input2.placeholder = "Inserisci nuovamente la combinazione";
+        document.body.appendChild(input2);
+
+        document.getElementById("codice1").style.display = "none";
+        document.getElementById("invio").style.display = "none";
+
+        input2.focus();
+
+        var button = document.createElement("button");
+        button.innerHTML = "Conferma";
+        button.onclick = function () {
+          var codice2 = document.getElementById("codice2").value;
+
+          if (codice1 === codice2) {
+            window.location.href = "complimenti.html";
+          } else {
+            var conferma = confirm("Combinazione errata! Vuoi riprovare?");
+            if (conferma) {
+              
+            }
+          }
+        };
+
+        document.body.appendChild(button);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Complimenti!</title>
+	<style>
+		body {
+			background: #87CEFA;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+
+		h1 {
+			color: #fff;
+		}
+
+		p {
+			color: #fff;
+			font-size: 1.2rem;
+		}
+
+		button {
+			background-color: #fff;
+			border: none;
+			color: #87CEFA;
+			padding: 10px 20px;
+			font-size: 1.2rem;
+			font-weight: bold;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+
+		button:hover {
+			background-color: #87CEFA;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<h1>Complimenti!</h1>
+	<p>La combinazione inserita è corretta.</p>
+	<button id="torna_home">Torna alla homepage</button>
+
+	<script>
+		var tornaHomeBtn = document.getElementById("torna_home");
+
+		tornaHomeBtn.addEventListener("click", function() {
+			// Torna alla homepage
+			window.location.href = "index.html";
+		});
+	</script>
+</body>
+</html>

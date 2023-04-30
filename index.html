@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu Nuovo/Salva</title>
+	<style>
+		body {
+			background: linear-gradient(to right, #66ffff, #008080);
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		h1 {
+			color: #fff;
+		}
+		button {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 8px;
+		}
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Menu Nuovo/Salva</h1>
+	<button id="nuovo">Nuovo</button>
+	<button id="salva">Salva</button>
+
+	<script>
+		var nuovoBtn = document.getElementById("nuovo");
+		var salvaBtn = document.getElementById("salva");
+
+		nuovoBtn.addEventListener("click", function() {
+			// Apri una nuova pagina per l'inserimento della combinazione
+			window.open("inserisci_combinazione.html");
+		});
+
+		salvaBtn.addEventListener("click", function() {
+			// Salva i dati
+			alert("Dati salvati correttamente.");
+		});
+	</script>
+</body>
+</html>
